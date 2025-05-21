@@ -67,14 +67,14 @@ class BmiResult extends StatelessWidget {
                   color: color,
                 ),
               ),
-              Text(
-                label,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                  color: color,
-                ),
-              ),
+              // Text(
+              //   label,
+              //   style: TextStyle(
+              //     fontSize: 20,
+              //     fontWeight: FontWeight.w600,
+              //     color: color,
+              //   ),
+              // ),
               const SizedBox(height: 20),
 
               // BMI Ruler

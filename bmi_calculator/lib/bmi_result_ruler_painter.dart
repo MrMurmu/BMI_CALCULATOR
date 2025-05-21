@@ -19,9 +19,9 @@ class BmiResultRulerPainter extends CustomPainter {
       ..strokeWidth = 6;
 
     Color getColorForTick(int index) {
-      if (index < 8) return Colors.blue;       // Underweight
-      if (index < 21) return Colors.green;     // Normal
-      if (index < 30) return Colors.orange;    // Overweight
+      if (index < 6) return Colors.blue;       // Underweight
+      if (index < 22) return Colors.green;     // Normal
+      if (index < 32) return Colors.orange;    // Overweight
       return Colors.red;                        // Obese
     }
 
@@ -51,13 +51,13 @@ class BmiResultRulerPainter extends CustomPainter {
     String label = "";
     Color labelColor = Colors.green;
 
-    if (currentTickIndex < 8) {
+    if (currentTickIndex < 6) {
       label = "Underweight";
       labelColor = Colors.blue;
-    } else if (currentTickIndex < 21) {
+    } else if (currentTickIndex < 22) {
       label = "Normal";
       labelColor = Colors.green;
-    } else if (currentTickIndex < 30) {
+    } else if (currentTickIndex < 32) {
       label = "Overweight";
       labelColor = Colors.orange;
     } else {

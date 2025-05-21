@@ -188,11 +188,14 @@ class _HomePageScreenState extends State<BmiCalculateScreen> {
                   setState(() {
                     if (type.contains("Height")) {
                       // _height = double.tryParse(controller.text) ?? _height;
-                      _height = int.tryParse(controller.text) ?? _height;
+                      int newHeight = int.tryParse(controller.text) ?? _height;
+                      _height = newHeight.clamp(0, 340);
                     } else if (type.contains("Weight")) {
-                      _weight = int.tryParse(controller.text) ?? _weight;
+                      int newWeight = int.tryParse(controller.text) ?? _weight;
+                      _weight = newWeight.clamp(1,400);
                     } else if (type.contains("Age")) {
-                      _age = int.tryParse(controller.text) ?? _age;
+                      int newAge = int.tryParse(controller.text) ?? _age;
+                      _age = newAge.clamp(1, 120);
                     }
                   });
                   Navigator.of(context).pop();
