@@ -24,7 +24,7 @@ class _HomePageScreenState extends State<BmiCalculateScreen> {
           children: [
             // Background blur
             BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+              filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
               child: Container(color: Colors.black.withOpacity(0.2)),
             ),
             BmiResult(
@@ -397,3 +397,4 @@ class _HomePageScreenState extends State<BmiCalculateScreen> {
     );
   }
 }
+
